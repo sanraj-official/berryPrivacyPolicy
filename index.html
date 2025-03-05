@@ -3,98 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy</title>
+    <title>Privacy Policy | Berry App</title>
     <style>
-        body {
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
             font-family: 'Arial', sans-serif;
-            line-height: 1.8;
-            max-width: 900px;
-            margin: 40px auto;
+        }
+
+        body {
+            background: linear-gradient(135deg, #7b6111, #054316, #6a11cb, #f009ba, #0f2027);
+            background-size: 300% 300%;
+            animation: gradientBG 12s ease infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
             padding: 30px;
-            background-color: #f8f9fa;
-            color: #333;
-            /* background-image:url("bg.jpg") ;
-            position:relative ; */
         }
+
+        /* Glassmorphic Card */
+        .container {
+            max-width: 900px;
+            background: rgba(255, 255, 255, 0.5);
+            padding: 30px;
+            border-radius: 12px;
+            backdrop-filter: blur(25px) saturate(180%);
+            -webkit-backdrop-filter: blur(25px) saturate(180%);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+            border: 1.5px solid rgba(255, 255, 255, 0.3);
+            color: rgb(67, 33, 126);
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Subtle Grain Effect */
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(rgba(255, 255, 255, 0.05) 30%, transparent 70%);
+            opacity: 0.2;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Heading Styles */
         h1 {
+            font-size: 2.3rem;
+            font-weight: bold;
             text-align: center;
-            color: #4CAF50;
-            margin-bottom: 20px;
+            color: #ffffff;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+            margin-bottom: 15px;
         }
+
         h2 {
-            color: #333;
-            border-bottom: 2px solid #4CAF50;
+            font-size: 1.6rem;
+            color: #ffeb3b;
+            margin-top: 20px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.4);
             padding-bottom: 5px;
+            position: relative;
+            z-index: 1;
         }
+
+        /* Text and List */
         p, ul {
             font-size: 1.1em;
+            margin: 10px 0;
+            color: white;
+            position: relative;
+            z-index: 1;
         }
+
         ul {
             margin-left: 20px;
         }
-        .container {
-            background: #fff;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+        ul li::before {
+            content: "✔";
+            color: #00ff99;
+            margin-right: 8px;
         }
+
+        /* Email Styling */
+        .email {
+            font-weight: bold;
+            color: #00e6ff;
+            text-decoration: none;
+        }
+
+        .email:hover {
+            text-decoration: underline;
+        }
+
+        /* Warning Text */
+        .highlight {
+            color: #ff4444;
+            font-weight: bold;
+        }
+
+        /* Footer */
         footer {
             text-align: center;
             margin-top: 20px;
             font-size: 0.9em;
-            color: #666;
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 1024px) {
+            .container {
+                max-width: 95%;
+                padding: 25px;
+            }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.4rem; }
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                max-width: 90%;
+                padding: 20px;
+            }
+            h1 { font-size: 1.8rem; }
+            h2 { font-size: 1.3rem; }
+            p, ul { font-size: 1em; }
+        }
+
+        @media screen and (max-width: 480px) {
+            .container {
+                max-width: 95%;
+                padding: 15px;
+            }
+            h1 { font-size: 1.5rem; }
+            h2 { font-size: 1.2rem; }
+            p, ul { font-size: 0.95em; }
+        }
+
+        /* Background Animation */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Privacy Policy</h1>
-        
-        
+
         <h2>Introduction</h2>
-        <p>Welcome to Berry App. Your privacy is important to us. This Privacy Policy explains how we collect, use, and safeguard your information while using our app.</p>
+        <p>Welcome to <strong>Berry App</strong>. Your privacy is important to us. This Privacy Policy explains how we collect, use, and safeguard your information while using our app.</p>
         
         <h2>Information We Collect</h2>
         <p>We may collect the following types of information:</p>
         <ul>
             <li>Personal information (e.g., name, email) if provided by you.</li>
-            <li>Device information, such as model, operating system, and unique device identifiers.</li>
+            <li>Device details like model, operating system, and unique device identifiers.</li>
             <li>Usage data, including interactions with our app and features used.</li>
             <li>Data stored locally on your device for better functionality.</li>
         </ul>
         
-        <h2>How We Use Your Information</h2>
-        <p>The collected data is used for the following purposes:</p>
-        <ul>
-            <li>To improve and personalize the app experience.</li>
-            <li>To ensure app security and performance.</li>
-            <li>To provide relevant content and features.</li>
-            <li>To enhance user engagement and support services.</li>
-            <li>In the future, to deliver personalized advertisements through ad networks.</li>
-        </ul>
-        
-        <h2>Third-Party Services</h2>
-        <p>We may use third-party services to enhance app functionality, analytics, and advertising. These services may collect and process data as per their respective privacy policies.</p>
-        
-        <h2>Data Security</h2>
-        <p>We take reasonable measures to protect your information but cannot guarantee absolute security. Your data is stored securely and used responsibly.</p>
-        
-        <h2>Ads and Analytics</h2>
-        <p>In the future, our app may display advertisements. These ads may be personalized based on your usage data. You can manage your ad preferences via your device settings.</p>
-        
-        <h2>Children’s Privacy</h2>
-        <p>Our app is not intended for children under the age of 13. We do not knowingly collect personal data from children.</p>
-        
-        <h2>Changes to This Policy</h2>
-        <p>We may update this policy periodically. Any changes will be posted on this page, and we encourage you to review it regularly.</p>
-        
-        <h2>Contact Us</h2>
-        <p>If you have any questions about this privacy policy, you can contact us at: <strong>101sanraj@gmail.com</strong></p>
+        <h2>Account Deletion</h2>
+        <p>If you wish to delete your account, please send a request to: <a href="mailto:101sanraj@gmail.com" class="email">101sanraj@gmail.com</a></p>
+        <p>⚠️ <span class="highlight">Account deletion requests may take 2-3 months or more</span> for processing, after which your data will be permanently deleted.</p>
+        <p>Additionally, due to resource constraints, <span class="highlight">your account may be deleted without prior notice</span>—especially if you remain inactive for an extended period.</p>
 
-        <p><i><b>Last Updated:</b> 01-03-2025</i></p>
+        <h2>Changes to This Policy</h2>
+        <p>We may update this policy periodically. Any changes will be posted here, and we encourage you to review it regularly.</p>
+
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feel free to contact us at: <a href="mailto:101sanraj@gmail.com" class="email">101sanraj@gmail.com</a></p>
+
+        <p><i><b>Last Updated:</b> 06-03-2025</i></p>
+        <footer>
+            &copy; 2025 Berry App. All Rights Reserved.
+        </footer>
     </div>
-    <footer>
-        &copy; 2025 Berry App. All Rights Reserved.
-    </footer>
+    
 </body>
 </html>
